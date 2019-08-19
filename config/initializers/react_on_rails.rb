@@ -23,7 +23,8 @@ ReactOnRails.configure do |config|
   # to automatically refresh your webpack assets on every test run.
   #
   config.build_test_command = "RAILS_ENV=test bin/webpack"
-
+  ## Replace the following line to the location where you keep translation.js & default.js.
+  config.i18n_dir = Rails.root.join('app', 'javascript', 'i18n')
   ################################################################################
   ################################################################################
   # SERVER RENDERING OPTIONS
@@ -38,5 +39,5 @@ ReactOnRails.configure do |config|
   # different. You should have ONE server bundle which can create all of your server rendered
   # React components.
   #
-  config.server_bundle_js_file = "hello-world-bundle.js"
+  config.server_bundle_js_file = "application-bundle.js"
 end
